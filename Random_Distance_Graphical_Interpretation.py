@@ -28,16 +28,18 @@ def ok():
           b.append(random.randint(100,500))
           b.append(random.randint(100,500))
 
+          x1 = b[(len(b) - 4):]
+          y1 = b[(len(b) - 2):]
+
           myCanvas.create_text(350, 25, text="RANDOM DISTANCE", font=("arial", 20, 'bold'), fill="#33ff71")
           myCanvas.create_text(50, 25, text=m, font=("arial", 16, 'bold'), fill="yellow",tags="hmm")
           create_circle(300, 300, 35, myCanvas)
           myCanvas.create_text(300,300, text=0, font=("arial", 12, 'bold'), fill="yellow")
-          create_circle((b[len(b)-2:])[0], (b[len(b)-2:])[1], 35, myCanvas)
-          myCanvas.create_text((b[len(b)-2:])[0], (b[len(b)-2:])[1], text=m, font=("arial", 12, 'bold'), fill="yellow")
-          myCanvas.create_line(b[len(b)-4:],dash=(4, 2),fill="white",width=2)
+          create_circle(y1[0], y1[1], 35, myCanvas)
+          myCanvas.create_text(y1[0], y1[1], text=m, font=("arial", 12, 'bold'), fill="yellow")
+          myCanvas.create_line(x1,dash=(4, 2),fill="white",width=2)
 
-          x1=b[len(b)-4:]
-          y1=b[len(b)-2:]
+
           print("count", m, b,x1,y1)
 
           def dist():
