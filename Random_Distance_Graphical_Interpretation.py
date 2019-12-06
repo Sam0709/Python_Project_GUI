@@ -46,20 +46,24 @@ def ok():
               c = []
               for i in range(int(len(x1) / 2)):
                   b1 = (np.array(x1)).reshape(-1, 2)
+                  print(b1)
                   b2 = b1[i]
-                  # print(b2)
+                  print(b2)
                   b3 = np.delete(b1, i, 0)
-                  # print(b3)
+                  print(b3)
                   dist = (b2 - b3) ** 2
                   dist = np.sum(dist, axis=1)
                   dist = np.sqrt(dist)
                   c.append(dist)
-                  # print(dist)
+                  print(dist)
 
               j = (np.array(c)).reshape(1, -1)
               j1=np.unique(j)
               j2=np.sum(j1)
+              print(c)
               return j2
+
+
 
           print("Distance:",dist())
           myCanvas.create_text(650, 25, text=round(dist()), font=("arial", 16, 'bold'), fill="yellow", tags="xyz")
