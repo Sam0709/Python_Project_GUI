@@ -28,8 +28,8 @@ def ok():
           b.append(random.randint(100,500))
           b.append(random.randint(100,500))
 
-          x1 = b[(len(b) - 4):]
-          y1 = b[(len(b) - 2):]
+          x1 = b[(len(b) - 4):] # B[-4:]
+          y1 = b[(len(b) - 2):] # B[:-4]
 
           myCanvas.create_text(350, 25, text="RANDOM DISTANCE", font=("arial", 20, 'bold'), fill="#33ff71")
           myCanvas.create_text(50, 25, text=m, font=("arial", 16, 'bold'), fill="yellow",tags="hmm")
